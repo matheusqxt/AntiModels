@@ -1,4 +1,4 @@
-# AntiModal
+# AntiModels
 
 **Habilite qualquer modelo de IA externo no Antigravity — OpenAI, Anthropic, DeepSeek, Groq, xAI, Ollama e qualquer API compatível.**
 

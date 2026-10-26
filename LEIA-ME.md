@@ -1,4 +1,4 @@
-# AntiModal — Kit de Instalação de Modelos no Antigravity
+# AntiModels — Kit de Instalação de Modelos no Antigravity
 
 Tudo que é preciso para habilitar **modelos externos** (OpenAI, Anthropic, DeepSeek, Groq,
 xAI, Ollama e qualquer API compatível) no Antigravity desktop, sem depender do "Fetch provider models" da interface.
@@ -11,7 +11,7 @@ foram lidos do sistema em execução.
 ## Comece aqui
 
 ```powershell
-cd AntiModal
+cd AntiModels
 
 # 1. Instalar o complemento (uma vez; ~2 min)
 .\INSTALAR-COMPLEMENTO.ps1
