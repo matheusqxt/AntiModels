@@ -1,0 +1,231 @@
+{
+  "openai": {
+    "label": "OpenAI",
+    "apiUrl": "https://api.openai.com/v1/chat/completions",
+    "provider": "openai",
+    "apiFormat": "openai",
+    "keyEnvHint": "OPENAI_API_KEY",
+    "discovery": "https://api.openai.com/v1/models",
+    "context": 400000,
+    "maxOutput": 128000,
+    "effortSupported": [
+      "minimal",
+      "low",
+      "medium",
+      "high"
+    ],
+    "effortRejected": [],
+    "defaultEffort": "medium",
+    "models": [
+      [
+        "gpt-6.1-terra",
+        "GPT-6.1 Terra",
+        "medium"
+      ],
+      [
+        "gpt-6-luna",
+        "GPT-6 Luna",
+        "medium"
+      ],
+      [
+        "gpt-4o",
+        "GPT-4o",
+        "medium"
+      ]
+    ],
+    "verified": false,
+    "note": "Escala de reasoning varia por modelo (linha o-series usa xhigh). Confirme por modelo.",
+    "slugs": {
+      "gpt-6.1-terra": "gpt-6.1-terra",
+      "gpt-6-luna": "gpt-6-luna",
+      "gpt-4o": "gpt-4o"
+    },
+    "effortPerModel": {}
+  },
+  "anthropic": {
+    "label": "Anthropic",
+    "apiUrl": "https://api.anthropic.com/v1/messages",
+    "provider": "anthropic",
+    "apiFormat": "anthropic",
+    "keyEnvHint": "ANTHROPIC_API_KEY",
+    "discovery": null,
+    "context": 200000,
+    "maxOutput": 64000,
+    "effortSupported": [
+      "low",
+      "medium",
+      "high"
+    ],
+    "effortRejected": [
+      "none"
+    ],
+    "defaultEffort": "medium",
+    "models": [
+      [
+        "claude-opus-5.5",
+        "Claude Opus 5.5",
+        "medium"
+      ],
+      [
+        "claude-sonnet-5.5",
+        "Claude Sonnet 5.5",
+        "medium"
+      ],
+      [
+        "claude-haiku-5.5",
+        "Claude Haiku 5.5",
+        "medium"
+      ]
+    ],
+    "verified": false,
+    "note": "apiFormat anthropic e obrigatorio; usar openai devolve resposta em formato que o app nao entende.",
+    "slugs": {
+      "claude-opus-5.5": "opus-5.5",
+      "claude-sonnet-5.5": "sonnet-5.5",
+      "claude-haiku-5.5": "haiku-5.5"
+    },
+    "effortPerModel": {}
+  },
+  "deepseek": {
+    "label": "DeepSeek (oficial)",
+    "apiUrl": "https://api.deepseek.com/v1/chat/completions",
+    "provider": "deepseek",
+    "apiFormat": "openai",
+    "keyEnvHint": "DEEPSEEK_API_KEY",
+    "discovery": "https://api.deepseek.com/v1/models",
+    "context": 1000000,
+    "maxOutput": 65536,
+    "effortSupported": [
+      "none",
+      "low",
+      "medium",
+      "high"
+    ],
+    "effortRejected": [],
+    "defaultEffort": "medium",
+    "models": [
+      [
+        "deepseek-flash",
+        "DeepSeek V4.1 Flash",
+        "medium"
+      ],
+      [
+        "deepseek-v4-pro",
+        "DeepSeek V4 Pro",
+        "medium"
+      ]
+    ],
+    "verified": false,
+    "note": "Escala de reasoning NAO testada aqui (exige a chave oficial). Confirme antes de confiar.",
+    "slugs": {
+      "deepseek-flash": "deepseek-v4.1-flash",
+      "deepseek-v4-pro": "deepseek-v4-pro"
+    },
+    "effortPerModel": {}
+  },
+  "xai": {
+    "label": "xAI (Grok)",
+    "apiUrl": "https://api.x.ai/v1/chat/completions",
+    "provider": "xai",
+    "apiFormat": "openai",
+    "keyEnvHint": "XAI_API_KEY",
+    "discovery": "https://api.x.ai/v1/models",
+    "context": 500000,
+    "maxOutput": 65536,
+    "effortSupported": [
+      "low",
+      "medium",
+      "high"
+    ],
+    "effortRejected": [
+      "none"
+    ],
+    "defaultEffort": "low",
+    "models": [
+      [
+        "grok-4.7",
+        "Grok 4.7",
+        "low"
+      ],
+      [
+        "grok-4.6",
+        "Grok 4.6",
+        "low"
+      ],
+      [
+        "grok-4.5",
+        "Grok 4.5",
+        "low"
+      ]
+    ],
+    "verified": false,
+    "note": "grok-4.20+ ignora logprobs silenciosamente. Reasoning e 'configurable'.",
+    "slugs": {
+      "grok-4.7": "grok-4.7",
+      "grok-4.6": "grok-4.6",
+      "grok-4.5": "grok-4.5"
+    },
+    "effortPerModel": {}
+  },
+  "groq": {
+    "label": "Groq",
+    "apiUrl": "https://api.groq.com/openai/v1/chat/completions",
+    "provider": "groq",
+    "apiFormat": "openai",
+    "keyEnvHint": "GROQ_API_KEY",
+    "discovery": "https://api.groq.com/openai/v1/models",
+    "context": 131072,
+    "maxOutput": 65536,
+    "effortSupported": [
+      "none"
+    ],
+    "effortRejected": [
+      "low",
+      "medium",
+      "high"
+    ],
+    "defaultEffort": "none",
+    "models": [
+      [
+        "openai/gpt-oss-120b",
+        "GPT-OSS 120B",
+        "none"
+      ],
+      [
+        "openai/gpt-oss-20b",
+        "GPT-OSS 20B",
+        "none"
+      ],
+      [
+        "llama-3.3-70b-versatile",
+        "Llama 3.3 70B",
+        "none"
+      ]
+    ],
+    "verified": false,
+    "note": "Groq so aceita 'none' ou 'default' em reasoning_effort; nivel graduado da HTTP 400.",
+    "slugs": {
+      "openai/gpt-oss-120b": "gpt-oss-120b",
+      "openai/gpt-oss-20b": "gpt-oss-20b",
+      "llama-3.3-70b-versatile": "llama-3.3-70b"
+    },
+    "effortPerModel": {}
+  },
+  "ollama": {
+    "label": "Ollama (local)",
+    "apiUrl": "http://localhost:11434/v1/chat/completions",
+    "provider": "ollama",
+    "apiFormat": "openai",
+    "keyEnvHint": "",
+    "discovery": "http://localhost:11434/v1/models",
+    "context": 32768,
+    "maxOutput": 4096,
+    "effortSupported": [],
+    "effortRejected": [],
+    "defaultEffort": null,
+    "models": [],
+    "verified": false,
+    "note": "Local: nao gasta token pago. Preencha os IDs com o que 'ollama list' mostrar.",
+    "effortPerModel": {}
+  }
+}

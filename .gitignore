@@ -1,0 +1,19 @@
+# Chaves e configuracoes locais — NUNCA publique
+*.env
+.env
+custom_models.json
+custom_model_identities.json
+provider-catalog.local.json
+
+# Backups gerados em runtime
+*.bak.*
+*.tmp
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store
